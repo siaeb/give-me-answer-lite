@@ -1,0 +1,22 @@
+<div style="color: #333; font-size: 14px; line-height: 20px; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">
+    <div style="width: 600px; padding-left: 50px;">
+        <div style="margin: 0 auto; padding-top: 10px; border-bottom: 1px dashed lightgrey;color: #333333ab;"><h3>{site_name}</h3></div>
+        <div style="padding: 10px 0 40px;">
+            <p>Hello {answer_author},</p>
+            <table width="100%" cellspacing="0" cellpadding="0"> 
+                <tr> 
+                    <td valign="top" style="padding-bottom: 20px;padding-right: 5px;">
+                        <p style="font-size: 14px; line-height: 20px; color: #333; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">
+                            <a style="text-decoration: none; color: #34b10d; font-weight: bold;" href="{comment_author_link}">{comment_author}</a> has commented on your answer at "<a href="{comment_link}" style="text-decoration: none; color: #34b10d; font-weight: bold;">{question_title}</a>":
+                            <br />
+                            <br>
+                        {comment_content}
+                        </p>
+                        <br>
+                        <div style="padding: 10px 0 0"><a class="btn" href="{comment_link}" style="color: #fff; border-radius: 3px; text-decoration: none; background-color: #1ac70c; padding: 10px 20px; font-size: 14px; font-family: Helvetica Neue, Helvetica, Arial, sans-serif;">View Comment</a></div>
+                    </td> 
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
