@@ -46,3 +46,22 @@ The plugin features the ability for users to ask and answer questions similar to
 = Documents and Support: =
 You can find [Documents](http://siaeb.com/downloads/give-me-answer/) and more detailed information about "Give Me Answer" plugin on [SiaEb.com](http://www.siaeb.com/).
 We provide support both on support forum on WordPress.org and our [support page](http://siaeb.com/questions/) on SiaEb.
+
+The plugin is frequently updated and more and more features added based on all the feedback from our users. This means you are welcome to give us feedback and suggestion on how you would want to have in the plugin.
+Visit our [Github](https://github.com/siaeb/give-me-answer-lite) project.
+
+== Installation ==
+
+1. Upload `give-me-answer-lite` to the `/wp-content/plugins/` directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Log In to your WordPress Dashboard and go to menu `Dashboard > Give Me Answer Lite > Settings` then choose pages where to put submit question form and list questions page.
+
+== Screenshots ==
+
+1. Front-end appearance
+2. Ask question page
+3. Single question page
+4. Dashboard
+5. Show user info when hover on username
+6. Share in socials
+7. User profile page
