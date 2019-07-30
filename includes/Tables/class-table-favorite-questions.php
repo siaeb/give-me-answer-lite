@@ -193,8 +193,9 @@ class GMA_Favorite_Questions extends GMA_BaseTable {
 
 		$usersearch = isset( $_REQUEST['s'] ) ? wp_unslash( trim( $_REQUEST['s'] ) ) : '';
 		$usersearch = trim( $usersearch );
+		$usersearch = sanitize_text_field($usersearch);
 
-		$category = isset( $_REQUEST['category'] ) ? $_REQUEST['category'] : '';
+		$category = isset( $_REQUEST['category'] ) ? sanitize_text_field($_REQUEST['category']) : '';
 
         $per_page = is_numeric($gma_general_settings['pagination']['user-profile']) ? $gma_general_settings['pagination']['user-profile'] : 15;
 		$paged    = $this->get_pagenum();

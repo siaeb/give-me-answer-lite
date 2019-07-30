@@ -200,8 +200,9 @@ class GMA_User_Answers extends GMA_BaseTable {
 
 		$usersearch = isset( $_REQUEST['s'] ) ? wp_unslash( trim( $_REQUEST['s'] ) ) : '';
 		$usersearch = trim( $usersearch );
+		$usersearch = sanitize_text_field($usersearch);
 
-		$category = isset( $_REQUEST['category'] ) ? $_REQUEST['category'] : '';
+		$category = isset( $_REQUEST['category'] ) ? sanitize_text_field($_REQUEST['category']) : '';
 
 		$per_page = is_numeric($gma_general_settings['pagination']['user-profile']) ? $gma_general_settings['pagination']['user-profile'] : 15;
 		$paged    = $this->get_pagenum();
@@ -247,11 +248,10 @@ class GMA_User_Answers extends GMA_BaseTable {
 			$where_query = ' WHERE p.ID  in ( SELECT post_parent FROM ' . $wpdb->posts .' WHERE post_author = ' . esc_sql( gma_get_user_id() ) .') AND (post_type = "gma-question" AND post_status = "publish")';
 		}
 
-
-		$per_page = $data['items_per_page'];
-		$current_page = $data['page'];
-		$offset = ($current_page - 1) * $per_page;
-		$limit_query = sprintf(" LIMIT %s,%s", $offset, $per_page);
+		$per_page       = $data['items_per_page'];
+		$current_page   = $data['page'];
+		$offset         = ($current_page - 1) * $per_page;
+		$limit_query    = sprintf(" LIMIT %s,%s", $offset, $per_page);
 
 		$query = "
 			SELECT {$fields_section} FROM {$wpdb->posts} p 	                

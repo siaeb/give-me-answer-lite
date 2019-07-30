@@ -161,8 +161,6 @@ class Give_Me_Answer_Lite {
 		require_once GMA_DIR . 'includes/Tables/class-table-favorite-questions.php';
 		require_once GMA_DIR . 'includes/Tables/class-table-answer.php';
 
-        require GMA_DIR . '/includes/Libraries/update-checker/plugin-update-checker.php';
-
 	}
 
     /**

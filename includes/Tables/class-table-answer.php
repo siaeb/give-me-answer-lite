@@ -41,12 +41,11 @@ class GMA_Answer_List_Table extends WP_List_Table {
 		/** This filter is documented in wp-admin/includes/post.php */
  		$per_page = apply_filters( 'edit_posts_per_page', $per_page, $post_type );
 
-		$question_id = $post->ID;
 		$args = array(
 			'post_type' => 'gma-answer',
 			'posts_per_page' => $per_page,
 			'order'      => 'ASC',
-			'post_parent' => $question_id,
+			'post_parent' => $post->ID,
 		   	'post_status' => 'publish',
 	 	);
 		$data = get_posts( $args );

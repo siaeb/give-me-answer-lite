@@ -202,8 +202,9 @@ class GMA_User_Questions extends GMA_BaseTable {
 
 		$usersearch = isset( $_REQUEST['s'] ) ? wp_unslash( trim( $_REQUEST['s'] ) ) : '';
 		$usersearch = trim( $usersearch );
+		$usersearch = sanitize_text_field($usersearch);
 
-		$category = isset( $_REQUEST['category'] ) ? $_REQUEST['category'] : '';
+		$category = isset( $_REQUEST['category'] ) ? sanitize_text_field($_REQUEST['category']) : '';
 
 		$per_page = isset($gma_general_settings['pagination']['user-profile']) ? $gma_general_settings['pagination']['user-profile'] : 15;
 		$per_page = is_numeric($per_page) ? $per_page : 15;
